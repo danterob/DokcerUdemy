@@ -8,6 +8,10 @@ RUN \
 
 COPY index.php /var/www/html/index.php
 
+ENV ENV=stg
+ENV VIRTUALIZATION=docker
+ENV TYPE=container
+
 RUN rm /var/www/html/index.html
 
 COPY default.conf /etc/apache2/sites-available/000-default
